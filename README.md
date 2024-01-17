@@ -7,4 +7,9 @@ Ask Me Anything requires the following libraries :
 - **openai**: The OpenAI Python client library for interacting with the OpenAI API. [More info](https://github.com/openai/openai-python).
 - **Pillow (PIL)**: The Python Imaging Library, used for image processing tasks. [More info](https://pillow.readthedocs.io/en/stable/).
 
+### Installing Dependencies
+
+To install these dependencies, you can typically use a package manager like pip for Python projects. 
+- **pip install customtkinter openai Pillow**
+
 
