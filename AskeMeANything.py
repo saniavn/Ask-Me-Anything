@@ -68,7 +68,64 @@ class App(customtkinter.CTk):
         conversation_history = []
         self.history_file = "conversation_history.txt"
         self.response_text = tk.StringVar()
-        # generate response using ChatGPT engine text-davinci-002
+
+        # def generate_response(user_input, age, topic):
+        #     # clear conversation history
+        #     conversation_history = []
+        # 
+        #     try:
+        #         response = openai.ChatCompletion.create(
+        #             model="gpt-3.5-turbo",
+        #             messages=[
+        #                 {"role": "system",
+        #                  "content": f"You are an expert in {topic} and You are talking to a {age} year old student. "
+        #                             f"Answer questions assuming this. If you are asked a question outside the realm of {topic}, "
+        #                             f"please answer that you can only answer questions about {topic} and "
+        #                             f"don't answer further for questions outside {topic} and avoid responding to off-topic queries.\n\n"},
+        #                 {"role": "user", "content": user_input}
+        #             ],
+        #             temperature=0.7,
+        #             max_tokens=1024,
+        #             top_p=1,
+        #             frequency_penalty=0,
+        #             presence_penalty=0
+        #         )
+        #     except Exception as e:
+        #         return f"Error in API call: {e}"
+        # 
+        #     # Check and extract GPT response
+        #     if 'choices' in response and response['choices']:
+        #         choice = response['choices'][0]
+        #         if 'message' in choice and 'content' in choice['message']:
+        #             message = choice['message']['content'].strip()
+        #         else:
+        #             message = "Response found, but 'content' key is missing."
+        #     else:
+        #         message = "No valid response found in 'choices'."
+        # 
+        #     with open(self.history_file, "r") as f:
+        #         conversation_history = f.read().splitlines()
+        # 
+        #     # append user input and AI response to conversation history file
+        #     conversation_history.append(user_input)
+        #     conversation_history.append(message)
+        # 
+        #     # write conversation history to file
+        #     with open(self.history_file, "w") as f:
+        #         f.write('\n'.join(conversation_history))
+        # 
+        #     return message
+        #  Sample of answer: sani (Grade 8): what is the best running shoes?
+            # I apologize, but as an AI language model, I am programmed to provide information about Astronomy only. I am not capable of providing recommendations for running shoes or any other topics outside of Astronomy. Do you have any questions about Astronomy that I can help you with?
+            # sani (Grade 8): What is the name of the tallest tree in the world?
+            # I can only answer questions about Astronomy, unfortunately, I cannot answer that question as it is not related to Astronomy.
+            # sani (Grade 8): how many seasons we have?
+            # There are four seasons in a year, namely spring, summer, autumn, and winter. The change in seasons is caused by the tilt of the Earth's axis and its orbit around the sun.
+            # sani (Grade 8): can you give me the name of red fruits?
+            # I'm sorry, but as an AI language model, I can only answer questions about Astronomy. However, some examples of red fruits are apples, strawberries, cherries, and raspberries.
+
+        
+        # generate response using ChatGPT engine text-davinci-002-- shutdown in 01/04/2024 you could use the above function instead (openai.ChatCompletion.create). 
         def generate_response(user_input, age, topic):
             # clear conversation history for this user
             conversation_history = []
@@ -89,15 +146,7 @@ class App(customtkinter.CTk):
             #         frequency_penalty=0,
             #         presence_penalty=0
             #     )
-            # Sample of answer: sani (Grade 8): what is the best running shoes?
-            # I apologize, but as an AI language model, I am programmed to provide information about Astronomy only. I am not capable of providing recommendations for running shoes or any other topics outside of Astronomy. Do you have any questions about Astronomy that I can help you with?
-            # sani (Grade 8): What is the name of the tallest tree in the world?
-            # I can only answer questions about Astronomy, unfortunately, I cannot answer that question as it is not related to Astronomy.
-            # sani (Grade 8): how many seasons we have?
-            # There are four seasons in a year, namely spring, summer, autumn, and winter. The change in seasons is caused by the tilt of the Earth's axis and its orbit around the sun.
-            # sani (Grade 8): can you give me the name of red fruits?
-            # I'm sorry, but as an AI language model, I can only answer questions about Astronomy. However, some examples of red fruits are apples, strawberries, cherries, and raspberries.
-
+           
             response = openai.Completion.create(
                 engine="text-davinci-002",
                 prompt=(
