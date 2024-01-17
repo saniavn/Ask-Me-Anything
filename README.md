@@ -1,5 +1,5 @@
 # Ask-Me-Anything-chatbot-for-kids
-<p align="justify"> Ask Me Anthing is a child-friendly chatbot that is specialized in three topics: Astronomy, Sneakers and Shoes, and Dinosaurs.  It sends the user's query to the OpenAI API chatGPT modle 3 and retrieves a response based on the user's age and topic selection. User input and AI-generated responses are then added to a conversation history file based on the user name and grade. </p>
+<p align="justify"> Ask Me Anthing is a child-friendly chatbot that is specialized in three topics: Astronomy, Sneakers and Shoes, and Dinosaurs. It sends the user's query to the OpenAI API's ChatGPT model 3 and retrieves a response based on the user's age and topic selection. User input and AI-generated responses are then added to a conversation history file based on the user name and grade. </p>
 
 ## Features: 
 Implemented dynamic image updating functionality: 
