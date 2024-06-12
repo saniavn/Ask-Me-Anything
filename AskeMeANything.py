@@ -199,7 +199,7 @@ class App(customtkinter.CTk):
             current_topic = self.subject_combobox.get()
 
             # dynamic image updating functionality based on the selected topic
-            image_file = TOPIC_IMAGES.get(current_topic, os.path.join(current_dir, "AMA_UI", "robo_AMA.png"))
+            image_file = TOPIC_IMAGES.get(current_topic, os.path.join(current_dir, "AMA_UI", "robo_AMA2.png"))
             self.logo_image = customtkinter.CTkImage(Image.open(image_file), size=(240, 200))
             self.subject_image_label.configure(image=self.logo_image)  # changes subject image
 
@@ -266,7 +266,7 @@ class App(customtkinter.CTk):
 
         # load image
         image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "AMA_UI")
-        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join("AMA_UI", "robo_AMA.png")), size=(80, 100))
+        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join("AMA_UI", "robo_AMA2.png")), size=(80, 100))
         self.welcome_image = customtkinter.CTkImage(Image.open(os.path.join("AMA_UI", "welcome.png")), size=(250, 100))
         self.subject_image = customtkinter.CTkImage(Image.open(os.path.join("AMA_UI", "2.png")), size=(240, 220))
 
