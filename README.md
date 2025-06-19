@@ -20,3 +20,6 @@ Ask Me Anything requires the following libraries :
 To install these dependencies, you can typically use a package manager like pip for Python projects. 
 - **pip install customtkinter**
 
+## Acknowledgments
+This project was initially developed and piloted by Erkia Salas and Saniya Vahedian Movahed.  
+Subsequent development, testing, and analysis were completed by Saniya Vahedian Movahed.
